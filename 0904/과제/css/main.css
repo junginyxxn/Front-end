@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#header {
+  box-shadow: 0 1px 10px 0 gray;
+  height: 100px;
+}
+#headerComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1400px;
+  height: inherit;
+  margin: 0 auto;
+}
+#headerLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+  height: inherit;
+}
+#pageName {
+  font-size: 35px;
+  font-weight: 500;
+}
+.grayFont {
+  color: gray;
+}
+#headerList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 500px;
+}
+#profiles {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 15px;
+  margin: 10px;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  align-items: center;
+}
+.region {
+  background-color: lightgray;
+  width: 300px;
+  margin: 2px 5px;
+  padding-left: 10px;
+  border-radius: 5%;
+}
+.region > dl > dt {
+  margin: 15px;
+  font-weight: bold;
+}
+.region > dl > dd {
+  margin: 15px 30px;
+}
+.poll-make {
+  height: 30px;
+  width: 300px;
+  margin: 2px;
+}
+
+#poll-make-btn {
+  border-radius: 10%;
+  height: 30px;
+  width: 110px;
+  font-size: 15px;
+  margin-top: 5px;
+}
+.poll {
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  align-self: center;
+  margin: 10px 0;
+  padding: 2px 20px 10px;
+  text-align: center;
+}
+
+.bottom-poll {
+  width: 300px;
+  margin: 2px 0;
+}
+
+#allstore {
+  background-color: rgb(161, 161, 161);
+  width: 300px;
+  border-radius: 5%;
+  margin: 5px;
+  padding: 10px 0;
+  text-align: center;
+}
+#bodySection {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 1400px;
+}
+#voteLanguage {
+  border: 1px solid black;
+  border-radius: 5%;
+  width: 300px;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px auto;
+}
+#voteButtons {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  justify-content: flex-end;
+}
+.bold {
+  font-weight: bold;
+  margin: 5px 0;
+}
+.languagePic {
+  width: 50px;
+  height: 60px;
+  margin: 5px;
+}
+.voteButton {
+  margin-right: 5px;
+  padding: 4px 5px;
+}
+#purpleButton {
+  background-color: blueviolet;
+  color: aliceblue;
+}
+.centerP {
+  text-align: center;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1050px;
+}
+.mainTable {
+  width: 1000px;
+  margin: 10px;
+}
+.tableDiv {
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 10px;
+}
+.tableImg {
+  height: 250px;
+  margin: 5px 5px 25px 5px;
+}
+.subTable {
+  width: 500px;
+  margin: 10px;
+  border-collapse: collapse;
+}
+caption {
+  text-align: left;
+  font-weight: bold;
+  margin: 5px;
+  font-size: 1.3em;
+}
+td {
+  padding: 5px;
+}
+.flexTable {
+  display: flex;
+  flex-direction: row;
+}
+.favoriteWrite:nth-child(2n) {
+  background-color: lightgray;
+}
+.borderTable {
+  border: 1px solid lightgray;
+}
+.tableBorder {
+  border: 1px solid lightgray;
+}
+.noSideBorder {
+  border-left: none;
+  border-right: none;
+}
+#footer {
+  width: 1400px;
+  margin-top: 10px;
+  margin-left: 505px;
+  padding: 20px 0;
+}
+#footerList {
+  display: flex;
+  width: 500px;
+  flex-direction: row;
+  justify-content: space-around;
+}

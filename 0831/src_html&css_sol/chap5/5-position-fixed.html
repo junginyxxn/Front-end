@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position - fixed</title>
+    <style>
+      .parent {
+        width: 300px;
+        height: 1000px;
+        border: 1px solid steelblue;
+        background-color: cornflowerblue;
+        margin: 10px;
+        line-height: 1000px;
+      }
+      .box-fixed {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        color: azure;
+        background-color: deeppink;
+        font-weight: bold;
+        text-align: center;
+        line-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">아주 긴 내용이 있음.</div>
+    <div class="box-fixed">^</div>
+  </body>
+</html>

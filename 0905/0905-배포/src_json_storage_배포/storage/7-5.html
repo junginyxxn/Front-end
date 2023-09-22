@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Localstorage</title>
+    <script>
+      function init() {
+        // localStorage에는 문자열로만 저장 가능.
+        localStorage.setItem("num", 1);
+        let num = localStorage.getItem("num");
+        console.log("1. ", num == 1); // true
+        console.log("2. ", num === 1); // false
+
+        let user = {
+          userid: "ssafy",
+          username: "안효인",
+        };
+        // localStorage에 user 객체 저장.
+        localStorage.setItem("userInfo1", user);
+        let userInfo1 = localStorage.getItem("userInfo1");
+        console.log("3. ", userInfo1); // [object Object]
+        console.log("4. ", typeof userInfo1); // string
+        console.log("5. ", userInfo1.username); // undefined
+
+        // localStorage에 user 객체를 string으로 변환 후 저장. >> 직렬화(serialization)
+        localStorage.setItem("userInfo2", JSON.stringify(user));
+        let userInfo2 = localStorage.getItem("userInfo2");
+        console.log("6. ", userInfo2); // {"userid":"ssafy","username":"안효인"}
+        console.log("7. ", typeof userInfo2); // string
+        // JSON형식의 문자열을 객체로 변환. >> 역직렬화(deserialization)
+        let userInfo3 = JSON.parse(userInfo2);
+        console.log("8. ", typeof userInfo3); // object
+        console.log("9. ", userInfo3.username); // 안효인
+      }
+    </script>
+  </head>
+  <body>
+    <body onload="init()">
+      <div id="result"></div>
+    </body>
+  </body>
+</html>

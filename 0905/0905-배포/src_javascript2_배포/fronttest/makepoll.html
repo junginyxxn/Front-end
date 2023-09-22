@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>투표생성</title>
+    <style>
+      .poll {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .poll-title {
+        color: steelblue;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .div-margin {
+        margin: 10px;
+      }
+      .poll-answer-list-item {
+        padding: 10px;
+      }
+      label {
+        color: darkslategrey;
+        font-weight: bold;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+      input[type="text"] {
+        width: 250px;
+        background-color: rgb(245, 245, 245);
+        border: 1px solid rgb(235, 235, 235);
+        padding: 7px;
+        margin-right: 5px;
+      }
+      input[type="text"]::placeholder {
+        font-weight: bold;
+        font-size: 13px;
+        color: rgb(150, 150, 150);
+      }
+      .button {
+        background: white;
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 8px;
+        border-radius: 3px;
+      }
+      .btn-primary {
+        border-color: midnightblue;
+        background: steelblue;
+        color: white;
+      }
+      .poll-make {
+        display: flex;
+      }
+      .poll-make > button {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="poll">
+      <h1 class="poll-title">투 표 생 성</h1>
+      <div class="poll-question div-margin">
+        <label for="question">질문 내용</label>
+        <input type="text" id="question" placeholder="질문 내용 ..." />
+      </div>
+      <div class="poll-answer div-margin">
+        <label for="question">답변 항목</label>
+        <button type="button" id="btn-add" class="button">답변항목추가</button>
+      </div>
+      <div id="poll-answer-list" class="div-margin">
+        <div class="poll-answer-list-item">
+          <input type="text" name="answer" />
+        </div>
+      </div>
+      <div class="poll-make">
+        <button type="button" id="btn-make" class="button btn-primary">투표 생성</button>
+      </div>
+    </div>
+    <script src="./js/poll.js"></script>
+  </body>
+</html>

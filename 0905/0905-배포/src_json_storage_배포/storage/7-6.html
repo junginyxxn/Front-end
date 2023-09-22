@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Localstorage</title>
+    <script>
+      function init() {
+        // localStorage 데이터 개수
+        console.log(localStorage.length); // 3
+        // 1번째 index 키 값
+        let key = localStorage.key(1);
+        console.log(key); // ? 저장시 순서는 보장 X : 7-5.html 재실행시 순서는 바뀜.
+        localStorage.removeItem("num");
+        console.log(localStorage.length); // 2
+        localStorage.clear();
+        console.log(localStorage.length); // 0
+      }
+    </script>
+  </head>
+  <body>
+    <body onload="init()">
+      <div id="result"></div>
+    </body>
+  </body>
+</html>

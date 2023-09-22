@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-wrap</title>
+    <style>
+      /* .container {
+        줄바꿈 없이 한줄에 모든 item 배치
+        flex-wrap: nowrap;
+        줄바꿈이 일어남
+        flex-wrap: wrap;
+        줄바꿈이 일어나고 item을 역순으로 배치
+        flex-wrap: wrap-reverse;
+      } */
+
+      .container {
+        display: flex;
+        background-color: deepskyblue;
+        margin-top: 10px;
+        border-radius: 5px;
+        width: 200px;
+      }
+      .container-nowrap {
+        flex-wrap: nowrap;
+      }
+      .container-wrap {
+        flex-wrap: wrap;
+      }
+      .container-wrap-reverse {
+        flex-wrap: wrap-reverse;
+      }
+      .item {
+        background-color: deeppink;
+        color: aliceblue;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-wrap</h2>
+    <div>
+      <input type="radio" name="flex-wrap" value="nowrap" checked /> nowrap
+      <input type="radio" name="flex-wrap" value="wrap" /> wrap
+      <input type="radio" name="flex-wrap" value="wrap-reverse" /> wrap-reverse
+    </div>
+    <div id="container" class="container">
+      <div class="item">item11</div>
+      <div class="item">item22</div>
+      <div class="item">item33</div>
+    </div>
+    <script>
+      const radios = document.querySelectorAll("input[name='flex-wrap']");
+      const container = document.querySelector("#container");
+      radios.forEach((radio) => {
+        radio.addEventListener("change", (e) => {
+          const current = e.currentTarget;
+          if (current.checked) {
+            container.setAttribute("class", `container container-${current.value}`);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

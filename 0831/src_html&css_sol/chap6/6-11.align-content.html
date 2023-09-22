@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: deepskyblue;
+        margin-top: 10px;
+        border-radius: 5px;
+        width: 400px;
+        height: 300px;
+      }
+      .container-stretch {
+        align-content: flex-start;
+      }
+      .container-flex-start {
+        align-content: flex-start;
+      }
+      .container-flex-end {
+        align-content: flex-end;
+      }
+      .container-center {
+        align-content: center;
+      }
+      .container-space-between {
+        align-content: space-between;
+      }
+      .container-space-around {
+        align-content: space-around;
+      }
+      .container-space-evenly {
+        align-content: space-evenly;
+      }
+      .item {
+        background-color: deeppink;
+        color: aliceblue;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>align-content</h2>
+    <div>
+      <input type="radio" name="align-content" value="stretch" checked /> stretch
+      <input type="radio" name="align-content" value="flex-start" /> flex-start
+      <input type="radio" name="align-content" value="flex-end" /> flex-end
+      <input type="radio" name="align-content" value="center" /> center
+      <input type="radio" name="align-content" value="space-between" /> space-between
+      <input type="radio" name="align-content" value="space-around" /> space-around
+      <input type="radio" name="align-content" value="space-evenly" /> space-evenly
+    </div>
+    <div id="container" class="container">
+      <div class="item">item1item1</div>
+      <div class="item">item2item2item2item2item2</div>
+      <div class="item">item3item3item3</div>
+    </div>
+    <script>
+      const radios = document.querySelectorAll("input[name='align-content']");
+      const container = document.querySelector("#container");
+      radios.forEach((radio) => {
+        radio.addEventListener("change", (e) => {
+          const current = e.currentTarget;
+          if (current.checked) {
+            container.setAttribute("class", `container container-${current.value}`);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

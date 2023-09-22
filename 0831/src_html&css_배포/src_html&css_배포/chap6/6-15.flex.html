@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      .container {
+        display: flex;
+        background-color: deepskyblue;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+      .item {
+        color: aliceblue;
+        background-color: deeppink;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .item1 {
+        /* flex-grow: 1; flex-shrink: 1; flex-basis: 0%; */
+        flex: 1;
+        /* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
+        /* flex: 1 1 auto; */
+        /* flex-grow: 1; flex-shrink: 1; flex-basis: 500px; */
+        /* flex: 1 500px; */
+      }
+      .item2 {
+        flex: 1 1 0;
+      }
+      .item2:nth-child(2) {
+        flex: 2 1 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex</h2>
+    <div class="container">
+      <div class="item item1">item1</div>
+      <div class="item item1">item2item2item2item2</div>
+      <div class="item item1">item3</div>
+    </div>
+    <hr />
+    <h4>비율이 아닌 영역 자체의 비율이 1 : 2 : 1</h4>
+    <div id="container" class="container">
+      <div class="item item2">item1</div>
+      <div class="item item2">item2item2item2item2</div>
+      <div class="item item2">item3</div>
+    </div>
+  </body>
+</html>

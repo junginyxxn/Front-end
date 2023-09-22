@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+  </head>
+  <body>
+    <button id="btn">click!!</button>
+    <script type="text/javascript">
+      var name = "안효인";
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        hello(name);
+      });
+
+      function hello(name) {
+        console.log("안녕하세요 " + name);
+      }
+    </script>
+  </body>
+</html>

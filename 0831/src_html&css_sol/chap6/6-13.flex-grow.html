@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-grow</title>
+    <style>
+      .container {
+        display: flex;
+        background-color: deepskyblue;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+      .item {
+        color: aliceblue;
+        background-color: deeppink;
+        height: 100px;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        /* flex-grow: 1; */
+      }
+      .item1 {
+        flex-grow: 1;
+      }
+      .item2:nth-child(1) {
+        flex-grow: 2;
+      }
+      .item2:nth-child(2) {
+        flex-grow: 1;
+      }
+      .item2:nth-child(3) {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-grow</h2>
+    <div class="container">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+    </div>
+    <div class="container">
+      <div class="item item1">item1</div>
+      <div class="item item1">item2item2item2item2</div>
+      <div class="item item1">item3</div>
+    </div>
+    <div class="container">
+      <div class="item item2">item1</div>
+      <div class="item item2">item2</div>
+      <div class="item item2">item3</div>
+    </div>
+  </body>
+</html>

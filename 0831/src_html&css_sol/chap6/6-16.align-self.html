@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>align-self</title>
+    <style>
+      .container {
+        display: flex;
+        background-color: deepskyblue;
+        margin-top: 10px;
+        border-radius: 5px;
+        height: 300px;
+      }
+      .item {
+        color: aliceblue;
+        background-color: deeppink;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .item:nth-child(1) {
+        align-self: auto;
+      }
+      .item:nth-child(2) {
+        align-self: stretch;
+      }
+      .item:nth-child(3) {
+        align-self: flex-start;
+      }
+      .item:nth-child(4) {
+        align-self: flex-end;
+      }
+      .item:nth-child(5) {
+        align-self: center;
+      }
+      .item:nth-child(6) {
+        align-self: baseline;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>align-self</h2>
+    <div class="container">
+      <div class="item">auto</div>
+      <div class="item">stretch</div>
+      <div class="item">flex-start</div>
+      <div class="item">flex-end</div>
+      <div class="item">center</div>
+      <div class="item">baseline</div>
+    </div>
+  </body>
+</html>

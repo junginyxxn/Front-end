@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-flow</title>
+    <style>
+      /* .container {
+        flex-flow: row wrap;
+        아래의 두줄을 줄여 쓴 것
+        flex-direction: row;
+        flex-wrap: wrap;
+      } */
+
+      .container {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: deepskyblue;
+        margin-top: 10px;
+        border-radius: 5px;
+        width: 200px;
+      }
+
+      .item {
+        background-color: deeppink;
+        color: aliceblue;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-flow</h2>
+    <div class="container">
+      <div class="item">item11</div>
+      <div class="item">item22</div>
+      <div class="item">item33</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+  </head>
+  <body>
+    <button onclick="javascript:windowClose();">함수 이용해서 닫기</button>
+    <a href="javascript:window.close();"> 메소드 이용해서 닫기 </a>
+    <script>
+      function windowClose() {
+        //window.close();
+        self.close();
+      }
+    </script>
+  </body>
+</html>

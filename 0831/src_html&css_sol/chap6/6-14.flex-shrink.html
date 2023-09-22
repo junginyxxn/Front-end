@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-shrink</title>
+    <style>
+      .container {
+        display: flex;
+        width: 300px;
+        background-color: deepskyblue;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+      .item {
+        color: aliceblue;
+        background-color: deeppink;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .item1:nth-child(1) {
+        flex-basis: 200px;
+        /* flex-shrink: 1; */
+        flex-shrink: 0;
+      }
+      .item2:nth-child(1) {
+        flex-shrink: 0;
+        width: 100px;
+      }
+      .item2:nth-child(2) {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-shrink</h2>
+    <div class="container">
+      <div class="item item1">item1</div>
+      <div class="item item1">item2item2item2item2</div>
+      <div class="item item1">item3</div>
+    </div>
+    <hr />
+    <h4>flex-shrink: 0; 설정때문에 container가 작어지더라도 첫번째 item은 100px의 폭을 유지</h4>
+    <div>
+      <input type="radio" name="flex-shrink" value="300px" checked /> 300px
+      <input type="radio" name="flex-shrink" value="100%" /> 100%
+    </div>
+    <div id="container" class="container">
+      <div class="item item2">item1</div>
+      <div class="item item2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+    <script>
+      const radios = document.querySelectorAll("input[name='flex-shrink']");
+      const container = document.querySelector("#container");
+      radios.forEach((radio) => {
+        radio.addEventListener("change", (e) => {
+          const current = e.currentTarget;
+          if (current.checked) {
+            container.setAttribute("style", `width: ${current.value};`);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        font-weight: bold;
+      }
+      .mint {
+        color: mediumspringgreen;
+      }
+      .orange {
+        color: orange;
+      }
+      .magenta {
+        color: magenta;
+      }
+    </style>
+    <script>
+      function info() {
+        let cls = document.querySelector("input[name='cls']:checked").value;
+        let name = document.getElementById("name").value;
+
+        let span = document.createElement("span");
+        span.setAttribute("class", cls);
+        span.appendChild(document.createTextNode(name));
+
+        let result = document.querySelector("#result");
+        result.appendChild(span);
+      }
+    </script>
+  </head>
+  <body>
+    <h3>요소와 속성</h3>
+    적용 할 클래스 선택 :
+    <label for=""><input type="radio" name="cls" value="mint" />민트</label>
+    <label for=""><input type="radio" name="cls" value="orange" />오렌지</label>
+    <label for=""><input type="radio" name="cls" value="magenta" />보라</label>
+    이름 : <input type="text" id="name" />
+    <button onclick="info();">확인</button>
+    <div id="result"></div>
+  </body>
+</html>

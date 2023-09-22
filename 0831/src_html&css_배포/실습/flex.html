@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        width: 500px;
+
+        display: flex; /*<ul>을 컨테이너로 설정*/
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        flex-wrap: wrap; /*줄바꿈에 대한 설정*/
+        align-content: flex-end;
+
+        height: 300px;
+        border: 1px solid black;
+        list-style-type: none;
+      }
+      ul > li {
+        border: 1px solid black;
+        height: 100px;
+        width: 100px;
+      }
+
+      .item1 {
+        align-self: center;
+      }
+
+      .item2 {
+      }
+
+      .item3 {
+      }
+
+      .item4 {
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="item1">아이템1</li>
+      <li class="item2">아이템2</li>
+      <li class="item3">아이템3</li>
+      <li class="item4">아이템4</li>
+      <li class="item5">아이템5</li>
+      <li class="item6">아이템6</li>
+      <li class="item7">아이템7</li>
+      <li class="item8">아이템8</li>
+    </ul>
+  </body>
+</html>

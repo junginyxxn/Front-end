@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content</title>
+    <style>
+      /* .container {
+        
+        default, item들을 시작점으로 정렬
+        flex-direction이 row일 경우는 왼쪽, column일 경우는 위
+      
+        justify-content: flex-start;
+        
+        item들을 끝점으로 정렬
+        flex-direction이 row일 경우는 오른쪽, column일 경우는 아래
+      
+        justify-content: flex-end;
+        item들을 가운데 정렬
+        justify-content: center;
+        item들의 사이(between)에 균일한 간격
+        justify-content: space-between;
+        item들의 둘레(around)에 균일한 간격
+        justify-content: space-around;
+        item들의 사이와 양 끝에 균일한 간격
+        justify-content: space-evenly;
+      } */
+
+      .container {
+        display: flex;
+        background-color: deepskyblue;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+      .container-flex-start {
+        justify-content: flex-start;
+      }
+      .container-flex-end {
+        justify-content: flex-end;
+      }
+      .container-center {
+        justify-content: center;
+      }
+      .container-space-between {
+        justify-content: space-between;
+      }
+      .container-space-around {
+        justify-content: space-around;
+      }
+      .container-space-evenly {
+        justify-content: space-evenly;
+      }
+      .item {
+        background-color: deeppink;
+        color: aliceblue;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>justify-content</h2>
+    <div>
+      <input type="radio" name="justify-content" value="flex-start" checked /> flex-start
+      <input type="radio" name="justify-content" value="flex-end" /> flex-end
+      <input type="radio" name="justify-content" value="center" /> center
+      <input type="radio" name="justify-content" value="space-between" /> space-between
+      <input type="radio" name="justify-content" value="space-around" /> space-around
+      <input type="radio" name="justify-content" value="space-evenly" /> space-evenly
+    </div>
+    <div id="container" class="container">
+      <div class="item">item1</div>
+      <div class="item">item2item2item2</div>
+      <div class="item">item3</div>
+    </div>
+    <script>
+      const radios = document.querySelectorAll("input[name='justify-content']");
+      const container = document.querySelector("#container");
+      radios.forEach((radio) => {
+        radio.addEventListener("change", (e) => {
+          const current = e.currentTarget;
+          if (current.checked) {
+            container.setAttribute("class", `container container-${current.value}`);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

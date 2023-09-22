@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>container - flex</title>
+    <style>
+      .float-container::after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+      .flex-container {
+        display: flex;
+        background-color: chartreuse;
+      }
+      .item1 {
+        float: left;
+        border: 1px solid darkgray;
+        padding: 5px;
+      }
+      .item2 {
+        border: 1px solid darkgray;
+        padding: 5px;
+      }
+      .i1 {
+        background-color: deeppink;
+      }
+      .i2 {
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>float</h2>
+    <div class="float-container">
+      <div class="item1 i1">
+        안녕하세요<br />안녕하세요 안녕하세요<br />안녕하세요<br />안녕하세요 안녕하세요
+        안녕하세요<br />안녕하세요<br />안녕하세요 안녕하세요
+      </div>
+      <div class="item1 i2">안녕하세요<br />안녕하세요 안녕하세요</div>
+    </div>
+    <br />
+    <h2>flex</h2>
+    <div class="flex-container">
+      <div class="item2 i1">
+        안녕하세요<br />안녕하세요 안녕하세요<br />안녕하세요<br />안녕하세요 안녕하세요
+        안녕하세요<br />안녕하세요<br />안녕하세요 안녕하세요
+      </div>
+      <div class="item2 i2">안녕하세요<br />안녕하세요 안녕하세요</div>
+    </div>
+  </body>
+</html>

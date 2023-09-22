@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position - absolute vs relative</title>
+    <style>
+      .parent {
+        width: 300px;
+        height: 300px;
+        border: 1px solid steelblue;
+        background-color: cornflowerblue;
+        margin: 100px;
+        float: left;
+        /* position: relative; */
+      }
+      .box-absolute {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 300px;
+        height: 300px;
+        color: azure;
+        background-color: deeppink;
+        font-weight: bold;
+        text-align: center;
+        line-height: 300px;
+      }
+      .box-relative {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        width: 300px;
+        height: 300px;
+        color: azure;
+        background-color: slateblue;
+        font-weight: bold;
+        text-align: center;
+        line-height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box-absolute">position: absolute</div>
+    </div>
+    <div class="parent">
+      <div class="box-relative">position: relative</div>
+    </div>
+  </body>
+</html>

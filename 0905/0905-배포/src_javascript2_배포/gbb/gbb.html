@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가위바위보!!!</title>
+    <style>
+      .title {
+        text-align: center;
+      }
+      h3 {
+        text-align: center;
+      }
+      .view {
+        display: flex;
+      }
+      .view-gbb {
+        display: flex;
+        justify-content: space-evenly;
+        width: 500px;
+        height: 150px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: lightgray;
+      }
+      .view-result {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin: 20px auto;
+      }
+      .view-result > img {
+        width: 180px;
+        margin-bottom: 10px;
+      }
+      .gbb {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .gbb > img {
+        width: 130px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title"><img src="rsp_game.png" width="600px" alt="" /></div>
+    <h3>가위 바위 보 중에 하나를 선택</h3>
+    <div class="view">
+      <div class="view-gbb">
+        <div class="gbb">
+          <img src="gbb0.png" onclick="game(0)" alt="" />
+        </div>
+        <div class="gbb">
+          <img src="gbb1.png" onclick="game(1)" alt="" />
+        </div>
+        <div class="view-result" style="display: none">
+          <img id="resultId" src="win.png" alt="" />
+          <button type="button" onclick="newGame()">새게임</button>
+        </div>
+        <div class="gbb">
+          <img src="gbb2.png" onclick="game(2)" alt="" />
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = () => {
+        comNum();
+      };
+      let com;
+      let gbbDiv = document.querySelector(".gbb:nth-child(2)");
+      let resultDiv = document.querySelector(".view-result");
+      function comNum() {
+        com = parseInt(Math.random() * 3);
+      }
+      function game(my) {
+        let result = (com - my + 2) % 3;
+
+        let resultImg = document.querySelector("#resultId");
+        let img = "";
+        if (result == 1) {
+          // 이겼음
+          img = "win.png";
+        } else if (result == 0) {
+          // 졌음
+          img = "lose.png";
+        } else {
+          // 비김
+          img = "tie.png";
+        }
+        gbbDiv.setAttribute("style", "display: none;");
+        resultDiv.setAttribute(
+          "style",
+          "display: ;z-index: 1;transform: scale(3);background-color: white;"
+        );
+        resultImg.setAttribute("src", img);
+      }
+      function newGame() {
+        comNum();
+        gbbDiv.setAttribute("style", "display: ;");
+        resultDiv.setAttribute("style", "display: none;");
+      }
+    </script>
+  </body>
+</html>

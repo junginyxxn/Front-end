@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-basis</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        background-color: deepskyblue;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+      .item {
+        color: aliceblue;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .item1 {
+        /* flex-basis: auto; */ /* 기본값 */
+        /* flex-basis: 0; */
+        /* flex-basis: 50%; */
+        flex-basis: 100px;
+        /* flex-basis: 10rem; */
+        /* flex-basis: content; */
+        background-color: deeppink;
+      }
+      .item2 {
+        width: 100px;
+        /* word-wrap: break-word; */
+        background-color: darkblue;
+      }
+      .item3 {
+        flex-basis: 150px;
+        width: 100px;
+        background-color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-basis</h2>
+    <div class="container">
+      <div class="item item1">item1</div>
+      <div class="item item1">item2item2item2item2item2</div>
+      <div class="item item1">item3</div>
+    </div>
+    <br />
+    <h2>width</h2>
+    <div class="container">
+      <div class="item item2">item1</div>
+      <div class="item item2">item2item2item2item2item2</div>
+      <div class="item item2">item3</div>
+    </div>
+    <br />
+    <h2>flex-basis + width</h2>
+    <div class="container">
+      <div class="item item3">item1</div>
+      <div class="item item3">item2item2item2item2item2</div>
+      <div class="item item3">item3</div>
+    </div>
+    <br />
+  </body>
+</html>

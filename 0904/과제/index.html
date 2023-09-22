@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSAFY BOOK CAFE</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css\main.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div id="headerComponent">
+        <div id="headerLeft">
+          <h1 id="pageName">SSAFY BookCafe</h1>
+          <p class="grayFont">공지사항</p>
+        </div>
+        <li id="headerList">
+          <ul class="grayFont">
+            로그인
+          </ul>
+          <ul class="grayFont">
+            회원가입
+          </ul>
+          <ul class="grayFont">
+            로그아웃
+          </ul>
+          <ul class="grayFont">
+            마이페이지
+          </ul>
+          <ul class="grayFont">
+            관리자
+          </ul>
+        </li>
+      </div>
+    </header>
+    <section id="bodySection">
+      <aside>
+        <div id="profiles">
+          <img src="img/noimg.png" alt="noImg" />
+          <img src="img/profile.png" alt="profile" />
+        </div>
+        <div id="allstore">전국매장펼치기</div>
+        <div class="region">
+          <dl>
+            <dt>서울</dt>
+            <dd>역삼점</dd>
+            <dd>선릉점</dd>
+          </dl>
+        </div>
+        <div class="region">
+          <dl>
+            <dt>대전</dt>
+            <dd>학하점</dd>
+            <dd>봉명점</dd>
+          </dl>
+        </div>
+        <div class="region">
+          <dl>
+            <dt>구미</dt>
+            <dd>안동점</dd>
+            <dd>공단점</dd>
+          </dl>
+        </div>
+        <div class="region">
+          <dl>
+            <dt>광주</dt>
+            <dd>하남산단점</dd>
+            <dd>광주역점</dd>
+          </dl>
+        </div>
+        <!--투표 만들기-->
+        <div class="bottom-poll">
+          <div class="poll-make">
+            <button id="poll-make-btn">투표만들기</button>
+          </div>
+          <div class="poll" style="display: none"></div>
+        </div>
+      </aside>
+      <div id="main">
+        <table class="mainTable">
+          <caption>
+            [ 프로그래밍 언어 ]
+          </caption>
+          <td>
+            <div class="tableDiv">
+              <img
+                src="img\book\p_book01.png"
+                alt="p_book01"
+                class="tableImg"
+              />
+              <p class="centerP">Do it! 점프 투 파이썬</p>
+              <p class="centerP">(18,000원)</p>
+            </div>
+          </td>
+          <td>
+            <div class="tableDiv">
+              <img
+                src="img\book\p_book02.png"
+                alt="p_book02"
+                class="tableImg"
+              />
+              <p class="centerP">HTML5 API 프로그래밍</p>
+              <p class="centerP">(23,000원)</p>
+            </div>
+          </td>
+          <td>
+            <div class="tableDiv">
+              <img
+                src="img\book\p_book03.png"
+                alt="p_book03"
+                class="tableImg"
+              />
+              <p class="centerP">백견불야일타 Vue.js입문</p>
+              <p class="centerP">(22,000원)</p>
+            </div>
+          </td>
+          <td>
+            <div class="tableDiv">
+              <img
+                src="img\book\p_book04.png"
+                alt="p_book04"
+                class="tableImg"
+              />
+              <p class="centerP">Java 프로그래밍</p>
+              <p class="centerP">(26,500원)</p>
+            </div>
+          </td>
+        </table>
+        <table class="mainTable">
+          <caption>
+            [ 에세이 ]
+          </caption>
+          <td>
+            <div class="tableDiv">
+              <img
+                src="img\book\e_book01.png"
+                alt="e_book01"
+                class="tableImg"
+              />
+              <p class="centerP">2인조</p>
+              <p class="centerP">(14,800원)</p>
+            </div>
+          </td>
+          <td>
+            <div class="tableDiv">
+              <img
+                src="img\book\e_book02.png"
+                alt="e_book02"
+                class="tableImg"
+              />
+              <p class="centerP">안녕, 소중한 사람</p>
+              <p class="centerP">(15,000원)</p>
+            </div>
+          </td>
+          <td>
+            <div class="tableDiv">
+              <img
+                src="img\book\e_book03.png"
+                alt="e_book03"
+                class="tableImg"
+              />
+              <p class="centerP">꽃을 보듯 너를 본다</p>
+              <p class="centerP">(10,000원)</p>
+            </div>
+          </td>
+          <td>
+            <div class="tableDiv">
+              <img
+                src="img\book\e_book04.png"
+                alt="e_book04"
+                class="tableImg"
+              />
+              <p class="centerP">곰돌이 푸, 행복한 일은</p>
+              <p class="centerP">매일 있어 (12,000원)</p>
+            </div>
+          </td>
+        </table>
+        <div class="mainTable flexTable">
+          <table class="subTable">
+            <caption>
+              [ 인기글 ]
+            </caption>
+            <tr class="favoriteWrite">
+              <td class="centerP bold">제목</td>
+              <td class="centerP bold">작성자</td>
+              <td class="centerP bold">조회수</td>
+            </tr>
+            <tr class="favoriteWrite">
+              <td>자바공부 쉽게하는법!!</td>
+              <td>이쎄림</td>
+              <td>1756</td>
+            </tr>
+            <tr class="favoriteWrite">
+              <td>알고리즘은 자바? 파이썬?</td>
+              <td>홍정밍</td>
+              <td>998</td>
+            </tr>
+            <tr class="favoriteWrite">
+              <td>스프링 정복하기~</td>
+              <td>김나켠</td>
+              <td>856</td>
+            </tr>
+          </table>
+        </table>
+        <table class="subTable borderTable">
+          <caption>
+            [ 최신글 ]
+          </caption>
+          <tr class="tableBorder">
+            <td class="noSideBorder centerP bold">제목</td>
+            <td class="noSideBorder centerP bold">작성자</td>
+            <td class="noSideBorder centerP bold">조회수</td>
+          </tr>
+          <tr class="tableBorder">
+            <td class="tableBorder">web 관련 질문있어요.</td>
+            <td class="tableBorder">이주녕</td>
+            <td class="tableBorder">12</td>
+          </tr>
+          <tr class="tableBorder">
+            <td class="tableBorder">vuejs는 이렇게 공부해보세요.</td>
+            <td class="tableBorder">조밍기</td>
+            <td class="tableBorder">98</td>
+          </tr>
+          <tr class="tableBorder">
+            <td class="tableBorder">꽃길만 걸어요.</td>
+            <td class="tableBorder">류해면</td>
+            <td class="tableBorder">56</td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <li id="footerList">
+        <ul class="grayFont">
+          카페소개
+        </ul>
+        <ul class="grayFont">
+          개인정보처리방침
+        </ul>
+        <ul class="grayFont">
+          이용약관
+        </ul>
+        <ul class="grayFont">
+          오시는길
+        </ul>
+        <ul>
+          © SSAFY Corp.
+        </ul>
+      </li>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

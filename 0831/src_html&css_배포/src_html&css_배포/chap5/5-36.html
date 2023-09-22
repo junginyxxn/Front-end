@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Box Model(margin)</title>
+
+    <style type="text/css">
+      /* 모든 margin을 2em으로 설정. */
+      body {
+        margin: 2em;
+      }
+      /* top & bottom margin을 1em, right & left margin을 2em으로 설정. */
+      body {
+        margin: 1em 2em;
+      }
+      /* margin을 top = 1em, right = 2em, bottom = 3em, left = 2em으로 설정. */
+      body {
+        margin: 1em 2em 3em;
+      }
+      body {
+        margin-top: 1em;
+        margin-right: 2em;
+        margin-bottom: 3em;
+        margin-left: 2em;
+      }
+      div {
+        border: 2px solid blue;
+        margin: 10px 5px 5px 1px;
+      }
+      .test {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="test">aaaaa</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-direction</title>
+    <style>
+      /* .container {
+        default, item들이 가로방향으로 배치 
+        flex-direction: row;
+        item들이 세로방향으로 배치 
+        flex-direction: column;
+        item들이 역순으로 가로 배치 
+        flex-direction: row-reverse;
+        item들이 역순으로 세로 배치 
+        flex-direction: column-reverse;
+      }  */
+
+      .container {
+        display: flex;
+        background-color: deepskyblue;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+      .container-row {
+        flex-direction: row;
+      }
+      .container-row-reverse {
+        flex-direction: row-reverse;
+      }
+      .container-column {
+        flex-direction: column;
+      }
+      .container-column-reverse {
+        flex-direction: column-reverse;
+      }
+      .item {
+        background-color: deeppink;
+        color: aliceblue;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-direction</h2>
+    <div>
+      <input type="radio" name="flex-direction" value="row" checked /> row
+      <input type="radio" name="flex-direction" value="row-reverse" /> row-reverse
+      <input type="radio" name="flex-direction" value="column" /> column
+      <input type="radio" name="flex-direction" value="column-reverse" /> column-reverse
+    </div>
+    <div id="container" class="container">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+    </div>
+    <script>
+      const radios = document.querySelectorAll("input[name='flex-direction']");
+      const container = document.querySelector("#container");
+      radios.forEach((radio) => {
+        radio.addEventListener("change", (e) => {
+          const current = e.currentTarget;
+          if (current.checked) {
+            container.setAttribute("class", `container container-${current.value}`);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

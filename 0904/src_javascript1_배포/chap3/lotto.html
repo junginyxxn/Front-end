@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotto</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      #btn {
+        margin: 0 auto 20px;
+        padding: 5px 10px;
+        background-color: plum;
+        color: blueviolet;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 19px;
+      }
+
+      #view {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        padding: 20px;
+        width: 700px;
+        height: 120px;
+        background-color: lightgray;
+      }
+      .ball {
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        border-radius: 50%;
+        line-height: 70px;
+        font-weight: bold;
+        align-self: center;
+      }
+      .ball0 {
+        background-color: tomato;
+      }
+      .ball1 {
+        background-color: orange;
+      }
+      .ball2 {
+        background-color: greenyellow;
+      }
+      .ball3 {
+        background-color: lightcyan;
+      }
+      .ball4 {
+        background-color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>이번주 로또 예상 번호</h1>
+    <button id="btn">번호 생성</button>
+    <div id="view"></div>
+    <script>
+      document.querySelector("#btn").addEventListener("click", game);
+      function game() {
+        let lotto = []; //배열 만들기
+        while (lotto.length < 6) {
+          let num = parseInt(Math.random() * 45 + 1); //1~45 난수
+          //같은 수 배제
+          if (lotto.indexOf(num) == -1) lotto.push(num);
+        }
+
+        lotto.sort(function (a, b) {
+          return a - b;
+        });
+        let i = 0;
+        let view = ``;
+        let intervalid = setInterval(function () {
+          if (lotto.length == i) {
+            clearInterval(intervalid);
+            return;
+          }
+          view += `<div class="ball ball${parseInt(lotto[i] / 10)}">${
+            lotto[i++]
+          }</div>`;
+          document.querySelector("#view").innerHTML = view;
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
