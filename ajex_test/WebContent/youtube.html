@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="query" /><button id="btn-search">검색</button>
+    <div id="videoView"></div>
+    <script>
+      let serviceKey = "--------- 본인의 Service Key를 넣으세요 ---------";
+      let baseUrl = "https://youtube.googleapis.com/youtube/v3/search";
+      document.querySelector("#btn-search").addEventListener("click", function () {
+        let keyword = document.querySelector("#query").value;
+        let queryString = `part=snippet&maxResults=5&q=${keyword}&type=video&key=${serviceKey}`;
+        let url = baseUrl + "?" + queryString;
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => makeList(data));
+      });
+
+      function makeList(data) {
+        console.log(data);
+        let videos = ``;
+        data.items.forEach((item) => {
+          console.log(item.id.videoId);
+          videos += `
+          <iframe id="ytplayer" type="text/html" width="720" height="405"
+            src="https://www.youtube.com/embed/${item.id.videoId}"
+            frameborder="0" allowfullscreen></iframe><br/>`;
+        });
+        document.querySelector("#videoView").innerHTML = videos;
+      }
+    </script>
+  </body>
+</html>
